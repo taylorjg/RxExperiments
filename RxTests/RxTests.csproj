@@ -62,6 +62,7 @@
     <Compile Include="FromAsyncPattern.cs" />
     <Compile Include="HotObservable.cs" />
     <Compile Include="ObservableCreate.cs" />
+    <Compile Include="ObservableGenerate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
