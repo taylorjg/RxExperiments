@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reactive;
 using System.Reactive.Linq;
 using System.Threading;
 using NUnit.Framework;
@@ -29,13 +30,13 @@ namespace RxTests
         {
             return ObservableGenerateWithIdentityResultSelector(
                 start,
-                i => i < start + count,
-                i => i + 1);
+                _ => _ < start + count,
+                _ => _ + 1);
         }
 
         private static IObservable<T> ObservableGenerateWithIdentityResultSelector<T>(T initialState, Func<T, bool> condition, Func<T, T> iterate)
         {
-            return Observable.Generate(initialState, condition, iterate, x => x);
+            return Observable.Generate(initialState, condition, iterate, _ => _);
         }
     }
 }
