@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorHandlingTests.cs" />
     <Compile Include="FirstSteps.cs" />
     <Compile Include="FromAsyncPattern.cs" />
     <Compile Include="HotObservable.cs" />
